@@ -1,4 +1,5 @@
 from flask import Flask, jsonify, request
+import json
 
 app = Flask(__name__)
 
@@ -63,7 +64,7 @@ recetas = {
             'Agrega el cuarto de taza de pan molido y el huevo, mezcla hasta que se integren bien.',
             'En un sartén a fuego bajo, pon a derretir un buen pedazo de mantequilla. Cuando se derrita, agrega ajo picado y romero hasta que se combinen los olores. Saca el ajo y romero.',
             'Agrega las albóndigas al sartén y báñalas con la mantequilla con ajo y romero. Cocínalas hasta que estén listas.',
-            'En ese mismo sartén o en uno más hondo a fuego medio, pon el puré de tomate y las albóndigas hasta que el puré burbujee. Si tu puré es comprado, puedes condimentarlo (si no lo está).'
+            'En ese mismo sartén o en uno más hondo a fuego medio, pon el puré de tomate y las albóndigas hasta que el puré burbujee. Si tu puré es comprado, puedes condimentarlo (si no lo está[...]
         ]
     }
 }
@@ -72,19 +73,28 @@ recetas = {
 def obtener_receta(nombre_receta):
     receta = recetas.get(nombre_receta)
     if receta:
-        return jsonify(receta)
+        return app.response_class(
+            response=json.dumps(receta, indent=4, sort_keys=True, ensure_ascii=False),
+            mimetype='application/json'
+        )
     else:
         return jsonify({'mensaje': 'Receta no encontrada'}), 404
 
 @app.route('/api/recetas', methods=['GET'])
 def obtener_todas_las_recetas():
-    return jsonify(recetas)
+    return app.response_class(
+        response=json.dumps(recetas, indent=4, sort_keys=True, ensure_ascii=False),
+        mimetype='application/json'
+    )
 
 @app.route('/api/recetas/categoria/<categoria>', methods=['GET'])
 def obtener_recetas_por_categoria(categoria):
     # Supongamos que añadimos una categoría a cada receta en el diccionario
     recetas_por_categoria = {nombre: detalles for nombre, detalles in recetas.items() if detalles.get('categoria') == categoria}
-    return jsonify(recetas_por_categoria)
+    return app.response_class(
+        response=json.dumps(recetas_por_categoria, indent=4, sort_keys=True, ensure_ascii=False),
+        mimetype='application/json'
+    )
 
 @app.route('/api/recetas', methods=['POST'])
 def agregar_receta():
@@ -97,5 +107,5 @@ def agregar_receta():
     return jsonify({'mensaje': 'Receta agregada correctamente'}), 201
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True)          
 
