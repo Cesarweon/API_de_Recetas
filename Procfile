@@ -1,1 +1,1 @@
-web: python recetas.py
+web: gunicorn recetas:app
