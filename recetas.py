@@ -19,7 +19,14 @@ recetas = {
             'Pimienta',
             'Nuez moscada (opcional)'
         ],
-        'pasos': [...]
+        'pasos': [
+            'Poner a fuego alto, en abundante agua fría, las papas peladas con sal.',
+            'Hervir durante 30 minutos o hasta que estén tiernas.',
+            'Colar y retirar el exceso de líquido.',
+            'Mezclar leche, mantequilla, ajo, pimienta y nuez moscada en una olla a fuego bajo.',
+            'Machacar las papas y mezclar con la infusión.',
+            'Servir caliente.'
+        ]
     },
     'masa_para_pizza': {
         'nombre': 'Masa para Pizza',
@@ -32,7 +39,13 @@ recetas = {
             'Una cucharadita de sal',
             'Aceite'
         ],
-        'pasos': [...]
+        'pasos': [
+            'Colocar la harina en un bowl y hacer un hueco en el centro.',
+            'Agregar agua, levadura, sal y un chorrito de aceite.',
+            'Mezclar y amasar durante 10 minutos.',
+            'Dejar reposar la masa en un recipiente con tapa durante 90 minutos.',
+            'Extender la masa y está lista para hornear.'
+        ]
     },
     'albondigas_bolonesa': {
         'nombre': 'Albóndigas Boloñesa',
@@ -48,7 +61,12 @@ recetas = {
             'Ajo picado',
             'Salsa o puré de tomate casero o comprado (250 gr)'
         ],
-        'pasos': [...]
+        'pasos': [
+            'Condimentar la carne molida y mezclar con pan molido y huevo.',
+            'Formar albóndigas y freírlas en mantequilla con ajo y romero.',
+            'Cocinar las albóndigas en puré de tomate a fuego medio hasta que burbujee.',
+            'Servir caliente con acompañamiento al gusto.'
+        ]
     }
 }
 
@@ -88,4 +106,5 @@ def agregar_receta():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
 
