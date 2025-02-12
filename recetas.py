@@ -74,33 +74,42 @@ recetas = {
 def obtener_receta(nombre_receta):
     receta = recetas.get(nombre_receta)
     if receta:
-        return jsonify(receta)
+        return app.response_class(
+            response=json.dumps(receta, indent=4, sort_keys=True, ensure_ascii=False),
+            mimetype='application/json'
+        )
     else:
         return jsonify({'mensaje': 'Receta no encontrada'}), 404
 
 @app.route('/api/recetas', methods=['GET'])
 def obtener_todas_las_recetas():
-    return jsonify(recetas)
+    return app.response_class(
+        response=json.dumps(recetas, indent=4, sort_keys=True, ensure_ascii=False),
+        mimetype='application/json'
+    )
 
 @app.route('/api/recetas/categoria/<categoria>', methods=['GET'])
 def obtener_recetas_por_categoria(categoria):
     recetas_por_categoria = {nombre: detalles for nombre, detalles in recetas.items() if detalles.get('categoria') == categoria}
     if not recetas_por_categoria:
-        return jsonify({'mensaje': 'No hay recetas en esta categoría'}), 404
-    return jsonify(recetas_por_categoria)
+        return app.response_class(
+            response=json.dumps({'mensaje': 'No hay recetas en esta categoría'}, indent=4, sort_keys=True, ensure_ascii=False),
+            mimetype='application/json'
+        )
+    return app.response_class(
+        response=json.dumps(recetas_por_categoria, indent=4, sort_keys=True, ensure_ascii=False),
+        mimetype='application/json'
+    )
 
 @app.route('/api/recetas', methods=['POST'])
 def agregar_receta():
     nueva_receta = request.get_json()
     nombre = nueva_receta.get('nombre')
-    categoria = nueva_receta.get('categoria')
-    
-    if not categoria:
+    if not nueva_receta.get('categoria'):
         return jsonify({'mensaje': 'La receta debe incluir una categoría'}), 400
-    
     if nombre in recetas:
         return jsonify({'mensaje': 'Receta ya existente'}), 400
-    
+
     recetas[nombre] = nueva_receta
     return jsonify({'mensaje': 'Receta agregada correctamente'}), 201
 
