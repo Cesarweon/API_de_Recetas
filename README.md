@@ -136,6 +136,5 @@ Si la receta ya existe:
 
 ---
 
-Esta documentación puede usarse en el repositorio de GitHub para describir el funcionamiento de la API. Si necesitas cambios o mejoras, dime.
 
 
