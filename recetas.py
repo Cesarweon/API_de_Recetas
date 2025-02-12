@@ -3,11 +3,6 @@ import json
 
 app = Flask(__name__)
 
-# Ruta para la página principal
-@app.route('/', methods=['GET'])
-def homepage():
-    return jsonify({'mensaje': 'Bienvenido a la API de Recetas'})
-
 # Datos de recetas con categorías
 recetas = {
     'pure_de_papas': {
