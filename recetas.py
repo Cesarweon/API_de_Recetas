@@ -3,7 +3,6 @@ import json
 
 app = Flask(__name__)
 
-# Datos de recetas con categorías
 recetas = {
     'pure_de_papas': {
         'nombre': 'Puré de Papas',
@@ -20,12 +19,13 @@ recetas = {
             'Nuez moscada (opcional)'
         ],
         'pasos': [
-            'Poner a fuego alto, en abundante agua fría, las papas peladas con sal.',
-            'Hervir durante 30 minutos o hasta que estén tiernas.',
-            'Colar y retirar el exceso de líquido.',
-            'Mezclar leche, mantequilla, ajo, pimienta y nuez moscada en una olla a fuego bajo.',
-            'Machacar las papas y mezclar con la infusión.',
-            'Servir caliente.'
+            'En una olla poner a fuego alto, en abundante agua fría sal y las papas peladas.',
+            'Dejar hervir durante 30 minutos o hasta que las papas estén blandas.',
+            'Colar las papas y retirar el exceso de agua.',
+            'Pon en la misma olla donde estaban las papas a fuego bajo, mezcla la leche, mantequilla, los dientes de ajo, un poco de pimienta y nuez moscada.',
+            'Una vez caliente un poco la infusion anterior retira los dientes de ajo, agrega las papas y machacalas hasta obtener un puré untable.',
+            'Sirve caliente.',
+
         ]
     },
     'masa_para_pizza': {
@@ -40,11 +40,11 @@ recetas = {
             'Aceite'
         ],
         'pasos': [
-            'Colocar la harina en un bowl y hacer un hueco en el centro.',
-            'Agregar agua, levadura, sal y un chorrito de aceite.',
-            'Mezclar y amasar durante 10 minutos.',
-            'Dejar reposar la masa en un recipiente con tapa durante 90 minutos.',
-            'Extender la masa y está lista para hornear.'
+        'Coloca la harina en un bowl y haz un hueco en el centro.',
+        'Agrega el agua, levadura, sal y un chorrito de aceite.',
+        'Mezcla y amasa durante 10 minutos.',
+        'Tapala y dejala reposar durante 90 hora.',
+        'Extiende la masa y ponle los ingredientes que prefieras.',
         ]
     },
     'albondigas_bolonesa': {
@@ -60,12 +60,13 @@ recetas = {
             'Ramas de romero',
             'Ajo picado',
             'Salsa o puré de tomate casero o comprado (250 gr)'
+            'Sirvelas solas o con pasta.',
         ],
         'pasos': [
-            'Condimentar la carne molida y mezclar con pan molido y huevo.',
-            'Formar albóndigas y freírlas en mantequilla con ajo y romero.',
-            'Cocinar las albóndigas en puré de tomate a fuego medio hasta que burbujee.',
-            'Servir caliente con acompañamiento al gusto.'
+        'Condimenta la carne molida y mezclala con el pan molido y el huevo.',
+        'Forma las albóndigas y fríelas en la mantequilla con el ajo y romero.',
+        'Cocina las albondigas en el puré de tomate a fuego medio hasta que burbujee.',
+        
         ]
     }
 }
