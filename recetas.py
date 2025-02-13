@@ -4,7 +4,7 @@ import json
 app = Flask(__name__)
 
 recetas = {
-    'pure_de_papas': {
+    'Puré de papas': {
         'nombre': 'Puré de Papas',
         'descripcion': 'Sencilla y relativamente económica de hacer. Alcanza para 5 personas o más.',
         'categoria': 'Guarnición',
@@ -28,7 +28,7 @@ recetas = {
 
         ]
     },
-    'masa_para_pizza': {
+    'Masa para pizza': {
         'nombre': 'Masa para Pizza',
         'descripcion': 'Masa para una pizza pequeña (1 a 2 personas).',
         'categoria': 'Panificados',
@@ -47,7 +47,7 @@ recetas = {
         'Extiende la masa y ponle los ingredientes que prefieras.',
         ]
     },
-    'albondigas_bolonesa': {
+    'Albondigas boloñesa': {
         'nombre': 'Albóndigas Boloñesa',
         'descripcion': 'Por si quieres solo comer carne. Suficiente para ±3 personas.',
         'categoria': 'Plato Fuerte',
@@ -60,12 +60,12 @@ recetas = {
             'Ramas de romero',
             'Ajo picado',
             'Salsa o puré de tomate casero o comprado (250 gr)'
-            'Sirvelas solas o con pasta.',
         ],
         'pasos': [
         'Condimenta la carne molida y mezclala con el pan molido y el huevo.',
         'Forma las albóndigas y fríelas en la mantequilla con el ajo y romero.',
         'Cocina las albondigas en el puré de tomate a fuego medio hasta que burbujee.',
+        'Sirvelas solas o con pasta.',
         
         ]
     }
