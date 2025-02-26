@@ -6,7 +6,7 @@ app = Flask(__name__)
 recetas = {
     'Puré de papas': {
         'nombre': 'Puré de papas',
-        'descripccion': 'Sencilla y relativamente económica de hacer. Suficiente para 5 personas.',
+        'descripcion': 'Sencilla y relativamente económica de hacer. Suficiente para 5 personas.',
         'categoria': 'Guarnición',
         'ingredientes': [
             '800 gramos a 1 kilo de papas',
@@ -30,7 +30,7 @@ recetas = {
     },
     'Masa para pizza': {
         'nombre': 'Masa para pizza',
-        'descripccion': 'Masa para una pizza pequeña (para 1 o 2 personas).',
+        'descripcion': 'Masa para una pizza pequeña (para 1 o 2 personas).',
         'categoria': 'Panificados',
         'ingredientes': [
             '200 gramos de harina de trigo',
@@ -51,7 +51,7 @@ recetas = {
     },
     'Albondigas boloñes': {
         'nombre': 'Albondigas boloñesa',
-        'descripccion': 'Por si solo quieres comer carne. Suficiente para 3 personas.',
+        'descripcion': 'Por si solo quieres comer carne. Suficiente para 3 personas.',
         'categoria': 'Plato fuerte',
         'ingredientes': [
             '½ kilo de carne molida',
@@ -77,9 +77,32 @@ recetas = {
 @app.route('/', methods=['GET'])
 def bienvenida():
     mensaje = """
-    <h1>Bienvenido a la API de recetas</h1>
-    <p>Descubre deliciosas recetas y comparte tus opiniones.</p>
-    <img src="https://us.123rf.com/450wm/yupiramos/yupiramos2006/yupiramos200607954/148663350-abra-el-dise%C3%B1o-del-icono-del-estilo-de-la-l%C3%ADnea-del-libro-de-recetas-tema-de-la-comida-y-de-la.jpg" alt="Imagen de bienvenida">
+    <html>
+        <head>
+            <title>Bienvenido a la API de recetas</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                }
+                h1 {
+                    color: #333;
+                }
+                p {
+                    color: #666;
+                    font-size: 18px;
+                }
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+            </style>
+        </head>
+        <body>
+            <h1>Bienvenido a la API de recetas</h1>
+            <p>Descubre deliciosas recetas y comparte tus opiniones.</p>
+            <img src="https://us.123rf.com/450wm/yupiramos/yupiramos2006/yupiramos200607954/148663350-abra-el-dise%C3%B1o-del-icono-del-estilo-de-la-l%C3%ADnea-del-libro-de-recetas-tema-de-la-comida-y-de-la.jpg" alt="Imagen de bienvenida">
+        </body>
+    </html>
     """
     return mensaje
 
@@ -131,3 +154,4 @@ def agregar_receta():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
