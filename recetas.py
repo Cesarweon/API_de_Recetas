@@ -49,7 +49,7 @@ recetas = {
         'imagen_url': 'https://www.solopostres.com/wp-content/uploads/2017/08/Como-Hacer-Masa-de-Pizza-Basica-01.jpg',
         'reseñas': []
     },
-    'Albondigas boloñes': {
+    'Albondigas boloñesa': {
         'nombre': 'Albondigas boloñesa',
         'descripcion': 'Por si solo quieres comer carne. Suficiente para 3 personas.',
         'categoria': 'Plato fuerte',
