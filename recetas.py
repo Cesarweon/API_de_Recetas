@@ -108,10 +108,11 @@ def bienvenida():
 
 @app.route('/api/recetas/<nombre_receta>', methods=['GET'])
 def obtener_receta(nombre_receta):
+    nombre_receta = nombre_receta.replace('-', ' ')
     receta = recetas.get(nombre_receta)
     if receta:
         return app.response_class(
-            response=json.dumps(receta, indent=4),
+            response=json.dumps(receta, indent=4, ensure_ascii=False),
             mimetype='application/json'
         )
     else:
@@ -119,6 +120,7 @@ def obtener_receta(nombre_receta):
 
 @app.route('/api/recetas/<nombre_receta>/reseñas', methods=['POST'])
 def agregar_reseña(nombre_receta):
+    nombre_receta = nombre_receta.replace('-', ' ')
     receta = recetas.get(nombre_receta)
     if not receta:
         return jsonify({'mensaje': 'Receta no encontrada'}), 404
@@ -132,7 +134,7 @@ def agregar_reseña(nombre_receta):
 @app.route('/api/recetas', methods=['GET'])
 def obtener_todas_las_recetas():
     return app.response_class(
-        response=json.dumps(recetas, indent=4),
+        response=json.dumps(recetas, indent=4, ensure_ascii=False),
         mimetype='application/json'
     )
 
@@ -142,7 +144,7 @@ def obtener_recetas_por_categoria(categoria):
     if not recetas_por_categoria:
         return jsonify({'mensaje': 'No hay recetas en esta categoria'}), 404
     return app.response_class(
-        response=json.dumps(recetas_por_categoria, indent=4),
+        response=json.dumps(recetas_por_categoria, indent=4, ensure_ascii=False),
         mimetype='application/json'
     )
 
