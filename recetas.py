@@ -108,6 +108,7 @@ def bienvenida():
 
 @app.route('/api/recetas/<nombre_receta>', methods=['GET'])
 def obtener_receta(nombre_receta):
+    nombre_receta = nombre_receta.replace('-', ' ')
     receta = recetas.get(nombre_receta)
     if receta:
         return app.response_class(
@@ -119,6 +120,7 @@ def obtener_receta(nombre_receta):
 
 @app.route('/api/recetas/<nombre_receta>/reseñas', methods=['POST'])
 def agregar_reseña(nombre_receta):
+    nombre_receta = nombre_receta.replace('-', ' ')
     receta = recetas.get(nombre_receta)
     if not receta:
         return jsonify({'mensaje': 'Receta no encontrada'}), 404
@@ -163,4 +165,3 @@ def agregar_receta():
 
 if __name__ == '__main__':
     app.run(debug=True)
-
