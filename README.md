@@ -113,8 +113,8 @@ Aquí puedes probar los endpoints directamente desde tu navegador:
 
 - [Pagina principal](https://api-de-recetas-b2269421c5fe.herokuapp.com/)  
 - [Ver todas las recetas](https://api-de-recetas-b2269421c5fe.herokuapp.com/api/recetas)  
-- [Ver receta específica (Pure-de-papas)](https://api-de-recetas-b2269421c5fe.herokuapp.com/api/recetas/Puré-de-papas)  
-- [Ver recetas por categoría (Guarnición)](https://api-de-recetas-b2269421c5fe.herokuapp.com/api/recetas/categoria/Guarnición)
+- [Ver receta específica (Puré-de-papas)](https://api-de-recetas-b2269421c5fe.herokuapp.com/api/recetas/Puré-de-papas)  
+- [Ver recetas por categoría (Panificados)](https://api-de-recetas-b2269421c5fe.herokuapp.com/api/recetas/categoria/Panificados)
 
 
 
