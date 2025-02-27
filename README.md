@@ -84,11 +84,11 @@ curl -X POST https://api-de-recetas-b2269421c5fe.herokuapp.com/api/recetas \
 
 #### Ejemplo de solicitud:
 ```bash
-curl -X POST https://api-de-recetas-b2269421c5fe.herokuapp.com/api/recetas/Puré%20de%20papas/reseñas \
+curl -X POST https://api-de-recetas-b2269421c5fe.herokuapp.com/api/recetas/Puré-de-papas/reseñas \
      -H "Content-Type: application/json" \
      -d '{
            "usuario": "Juan Pérez",
-           "comentario": "Delicioso y fácil de hacer!",
+           "comentario": "Delicioso y fácil de hacer",
            "puntuación": 5
          }'
 ```
