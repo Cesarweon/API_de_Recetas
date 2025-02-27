@@ -71,6 +71,61 @@ recetas = {
         ],
         'imagen_url': 'https://www.petitchef.es/imgupl/recipe/albondigas-a-la-bolonesa--66042p86387.jpg',
         'reseñas': []
+    },
+    'Helltaker Pancakes': {
+    'nombre': 'Helltaker Pancakes',
+    'descripcion': 'Pancakes vistos en Helltaker.',
+    'categoria': 'Desayuno',
+    'ingredientes': [
+        '1 Huevo',
+        '1 taza de leche',
+        '1 taza de harina'
+    ],
+    'pasos': [
+        'Mezcla todos los ingredientes en un recipiente y revuelvelo como si tu vida dependiera de ello.',
+        'En un sarten caliente aplica un poco de aceite suficiente un solo pancake (repitelo cada vez que hagas otro).',
+        'Coloca un poco de la mezcla en el sarten cocinalo por 1 minuto dale la vuelta y cocinalo por otros 40 segundos (repitelo por cada pancake).',
+        'Rellenalo de lo que quieras (Nutella, mermelada de fresa, platano, etc).'
+    ],
+    'imagen_url': '',
+    'reseñas': []
+    },
+    'Awaria Pudding Pies': {
+    'nombre': 'Awaria Pudding Pies',
+    'descripcion': 'Deliciosos pastelillos rellenos de pudin.',
+    'categoria': 'Postre',
+    'ingredientes': [
+        'Masa del pastelillo:',
+        '250 gramos de harina',
+        '60 gramos de azucar glass',
+        '125 gramos de mantequilla',
+        '3 yemas de huevo',
+        '',
+        'Pudin:',
+        '2 yemas de huevo',
+        '200 mililitros de leche',
+        '25 gramos de mantequilla',
+        '15 gramos de azúcar vainillada o azucar de vainilla',
+        '1 cucharada de harina',
+        '1 cucharada de fécula de papa'
+    ],
+    'pasos': [
+        'Masa del pastelillo:',
+        'Combina todos los ingredientes en un recipiente y haz la masa a mano.',
+        'Divide la masa en dos y ambas partes guardalas en el refrigerador en lo que haces el pudin.',
+        '',
+        'Pudin:',
+        'En otro recipiente mezcla ⅓ de la leche con la harina, la fécula y las yemas de huevo (para evitar que la harina forme grumos pasala por un colador para hacerla más fina).',
+        'Cocina los remanentes ⅔ de leche con la azucar vainillada.',
+        'Cuando la azúcar se integre mientras sigues revolviendo, agrega la mezcla de harina anteriormente hecha, después agrega la mantequilla. Esta mezcla estara lista cuando la mantequilla se derrita y integre. Dejala enfriar por ahora.',
+        'Saca la masa del refrigerador y estirala una mitad la usaremos para la base del pastelillo y la otra para cerrarlos por arriba.',
+        'Con un molde o un vaso vacío corta porciones del mismo tamaño y colocalas presionando en un molde de cupcakes.',
+        'Rellena los moldes con masa con cucharadas completas de pudin después cierralo con más masa, pon tu dedo pulgar en los bordes del molde para eliminar excesos de masa.',
+        'Junta todos los pastelillos que hayas hecho y hornealos a 180 grados C° por 25 minutos.',
+        'Los pastelillos estaran listos cuando se vean un poco más oscuros. Espera a que se enfrien un poco antes de desmoldarlos.'
+    ],
+    'imagen_url': '',
+    'reseñas': []
     }
 }
 
